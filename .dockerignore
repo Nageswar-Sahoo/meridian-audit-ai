@@ -5,7 +5,7 @@ __pycache__/
 
 # Environment & credentials (injected via Cloud Run env vars / Secret Manager)
 .env
-.env.*
+.env
 credentials/
 
 # Git
