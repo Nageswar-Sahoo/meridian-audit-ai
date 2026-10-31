@@ -2,10 +2,10 @@
 
 THE LOCAL <-> CLOUD TOGGLE
 --------------------------
-    APP_MODE=local   (default)  Runs on your laptop with ONLY a Gemini API key.
+    APP_MODE=local   (default)  Runs on your laptop with ONLY a Gemini API .key.
                                 Vectors  -> Chroma, saved in ./.meridian/chroma
                                 Files    -> ./.meridian/uploads
-                                Embeddings -> Gemini API (API key)
+                                Embeddings -> Gemini API (API .key)
                                 No Google Cloud project, bucket or service account needed.
 
     APP_MODE=cloud              Runs against Google Cloud (what Cloud Run uses).
@@ -45,7 +45,7 @@ class Settings(BaseSettings):
     # --- Embeddings ---
     # Cloud: Vertex AI model. Must output 768 dims to match the Vector Search index.
     embedding_model_name: str = Field("text-embedding-005", validation_alias="VERTEX_EMBEDDING_MODEL_NAME")
-    # Local: Gemini API model (API key). Chroma has no fixed size, 768 keeps both modes alike.
+    # Local: Gemini API model (API .key). Chroma has no fixed size, 768 keeps both modes alike.
     local_embedding_model_name: str = Field("gemini-embedding-001", validation_alias="LOCAL_EMBEDDING_MODEL_NAME")
     embedding_dimensions: int = 768
 
@@ -107,7 +107,7 @@ class Settings(BaseSettings):
 settings = Settings()
 
 
-# Cloud mode on a laptop: point Google's client libraries at the service-account key.
+# Cloud mode on a laptop: point Google's client libraries at the service-account .key.
 # (On Cloud Run nothing is set here; the service's own identity is used.)
 if settings.is_cloud and settings.gcp_service_account_path:
     key_path = Path(settings.gcp_service_account_path)

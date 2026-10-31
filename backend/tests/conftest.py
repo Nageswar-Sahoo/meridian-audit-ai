@@ -1,4 +1,4 @@
-"""Test setup: fake config so the tests run without Google Cloud, a Gemini key or the internet."""
+"""Test setup: fake config so the tests run without Google Cloud, a Gemini .key or the internet."""
 import os
 import sys
 import tempfile
@@ -9,7 +9,7 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 # Environment variables win over .env, so a developer's real .env never leaks into tests
 os.environ["APP_MODE"] = "local"
 os.environ["LOCAL_DATA_DIR"] = tempfile.mkdtemp(prefix="meridian-test-")
-os.environ["GOOGLE_API_KEY"] = "test-key"
+os.environ["GOOGLE_API_KEY"] = "test-.key"
 os.environ["GCP_PROJECT_ID"] = "test-project"
 os.environ["GCP_REGION"] = "us-central1"
 # Empty on purpose: nothing may try to reach Cloud Storage

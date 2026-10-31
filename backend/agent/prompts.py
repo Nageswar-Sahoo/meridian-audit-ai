@@ -173,7 +173,7 @@ YOUR INSTRUCTIONS
 
 2. Write the memo in professional CFO language — concise, structured, and actionable. \
    Reference Aldermoor governance terms where relevant (delegation of authority, payment release, \
-   cost centre, IFRS, Group Treasury). Avoid restating every detail; synthesise key findings only.
+   cost centre, IFRS, Group Treasury). Avoid restating every detail; synthesise .key findings only.
 
 3. End with a clear NEXT ACTIONS section — name the Aldermoor team responsible and the deadline.
 

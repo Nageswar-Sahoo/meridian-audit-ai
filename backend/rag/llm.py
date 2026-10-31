@@ -1,8 +1,8 @@
 """The LLM used by both the RAG chain and the agents.
 
-Gemini is called through the Gemini API with an API key (GOOGLE_API_KEY) in BOTH modes:
-  * local - the key comes from your .env
-  * cloud - Cloud Run injects the same key from Secret Manager
+Gemini is called through the Gemini API with an API .key (GOOGLE_API_KEY) in BOTH modes:
+  * local - the .key comes from your .env
+  * cloud - Cloud Run injects the same .key from Secret Manager
 Embeddings (rag/embeddings.py) switch between the Gemini API and Vertex AI with APP_MODE.
 """
 from functools import lru_cache
